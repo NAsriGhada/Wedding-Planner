@@ -1,0 +1,40 @@
+@model User
+<div>
+    <partial name ="_NavBar">
+</div>
+<hr>
+<div>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Wedding of</th>
+                <th>Date</th>
+                <th>Guest Count</th>
+                <th>Action</th>
+        </thead>
+        <tbody>
+            @foreach (var c in ViewBag.Wedders )
+            {
+              <tr>
+                <td>@c.WedderOne & @c.WedderTwo </td>
+                <td>@c.Date</td>
+                <td>0</td>
+                @if(ViewBag.LoggedUser.UserId==c.UserId)
+                {
+                    <td><a href="">Delete</a></td>
+                }
+                else
+                {
+                    <td>
+                        <form action="" method="post">
+                            <input type="hidden" name="" value="@c.WeddingId">
+                            <input type="submit" value="RSVP">
+                        </form>
+                    </td>
+
+                }
+            </tr>  
+            }
+        </tbody>
+    </table>
+</div>

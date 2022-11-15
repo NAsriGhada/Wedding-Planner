@@ -1,0 +1,12 @@
+@model User
+
+<nav class="navbar bg-light">
+  <div class="container-fluid">
+    <h1 class="navbar-brand">Welcome @ViewBag.LoggedUser.FirstName!</h1>
+    <div class="d-flex">
+      <a href="" class="btn btn-primary m-3">Home</a>
+      <a href="/addwedding" class="btn btn-info m-3">Plan a Wedding</a>
+      <a href="/logout" class="btn btn-danger m-3">Logout</a>
+    </div>
+  </div>
+</nav>

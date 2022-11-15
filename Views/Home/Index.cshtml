@@ -1,0 +1,47 @@
+﻿@model User
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div >
+    <h2 class="text-center">👋🤩💖🤴Wedding Planner App💘🤩👋</h2>
+    <br>
+    <div class="row">
+        <div class="col-6">
+            <h2 class="text-center">Register</h2>
+            <form action="/register" method="post">
+                <div class="form-group">
+                    <label asp-for="FirstName" class="form-label">First Name</label>
+                    <input asp-for="FirstName" class="form-control">
+                    <span asp-validation-for="FirstName" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="LastName" class="form-label">Last Name</label>
+                    <input asp-for="LastName" class="form-control">
+                    <span asp-validation-for="LastName" class="text-danger"> </span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Email" class="form-label">Email</label>
+                    <input asp-for="Email" class="form-control">
+                    <span asp-validation-for="Email" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Password" class="form-label">Password</label>
+                    <input asp-for="Password" class="form-control">
+                    <span asp-validation-for="Password" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="ConfirmPassword" class="form-label">Confirm Password</label>
+                    <input asp-for="ConfirmPassword" class="form-control">
+                    <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+                </div>
+                <br>
+                <input type="submit" value="Register" class="form-control btn btn-dark btn-lg">
+            </form>
+        </div>
+        <div class="col-6">
+            <h2 class="text-center">Login</h2>
+            <partial name="_LoginUser">
+        </div>
+    </div>
+</div>
